@@ -10,22 +10,25 @@
   <head>
       <title>UserName</title>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
+      <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/mycss/userTest.css" />
   </head>
 
   <body>
-      <h1>Пролог</h1>
-      <h4 style="width: 480px">Ты стоишь в космическом порту и готов подняться на борт
-          своего корабля. Разве ты не об этом мечтал? Стать капитаном
+  <p>
+  <h1 style="position: fixed; top: 10px; left: 50px">Пролог</h1>
+      <h4 style="position: fixed; top: 80px; left: 15px; width: 350px">
+          <span>Ты стоишь в космическом порту и готов подняться на борт
+              своего корабля.</span><br> <span>Разве ты не об этом мечтал?</span><br> <span>Стать капитаном
           галактического судна с экипажем, который будет совершать
-          подвиги под твоим командованием.
+          подвиги под твоим командованием.</span> <br>
           Так что вперед!
       </h4>
       <br/>
       <br/>
-      <br/>
-      <h1>Знакомство с экипажем</h1>
-      <h4>
+
+      <h1 style="position: fixed; top: 300px; left: 750px">Знакомство с экипажем</h1>
+
+      <h4 style="position: fixed; top: 350px; left: 800px; width: 350px">
           Когда ты поднялся на борт корабля, тебя поприветсвовала девушка с черной палкой в руках:
           - Здравтсуйте, командир! Я Зинаида - ваша помощница. Видите? Там в углу пьет кофе
           наш штурман - сержант Перегарный Шлейф, под штурвалом спит наш бортмеханик - Черный Богдан,
@@ -37,6 +40,8 @@
       <br/>
       <br/>
 
+
+
       <%
           String insertName;
       if (User.getInsertName() == null) {
@@ -46,12 +51,12 @@
       }
       %>
 
-      <div style="color: red"><%= insertName%></div>
+      <div class="insertName" style="color: red; position: fixed; top: 310px; left: 50px"><%= insertName%></div>
       <form method="post" action="http://localhost:8080/userName">
           <label>
-              <input type="text" name="name"><br />
+              <input type="text" name="name" style="position: fixed; top: 330px; left: 50px; "><br />
           </label>
-          <button type="submit">Представиться</button>
+          <button type="submit" style="position: fixed; top: 351px;left: 50px">Представиться</button>
       </form>
 
   </body>

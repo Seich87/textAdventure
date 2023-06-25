@@ -7,6 +7,16 @@ public class Forms {
     private static String text1;
     private static String text2;
     private static String location;
+
+    public static String getBackground() {
+        return background;
+    }
+
+    public static void setBackground(String background) {
+        Forms.background = background;
+    }
+
+    private static String background;
     private static String name;
     private static String sessionID;
 
@@ -63,7 +73,8 @@ public class Forms {
 
         if (title.contains("Ты потерял память")) {
             if (selection.equals("selection1")) {
-                Forms.setTitle("Ты принял вызов. Поднимешься на мостик к их капитану?");
+                Forms.setBackground("/mycss/most.jpg");
+                Forms.setTitle("Ты принял вызов...<br>Поднимешься на мостик к их капитану?");
                 Forms.setText1("Подняться на мостик");
                 Forms.setText2("Отказаться подниматься на мостик");
                 Forms.setLocation("/mySetServlet");
@@ -71,12 +82,14 @@ public class Forms {
                 Forms.setTitle("Ты отклонил вызов. Поражение");
                 User.setInsertName(null);
                 Forms.setLocation("/lose");
+                Forms.setBackground("/mycss/lose.jpg");
             }
 
 
         } else if (title.contains("Ты принял вызов")) {
             if (selection.equals("selection1")) {
                 Forms.setTitle("Ты поднялся на мостик. Ты кто?");
+                Forms.setBackground("/mycss/capitan.jpg");
                 Forms.setText1("Рассказать о себе правду");
                 Forms.setText2("Солгать о себе");
                 Forms.setLocation("/mySetServlet");
@@ -84,6 +97,7 @@ public class Forms {
                 Forms.setTitle("Ты не прошел переговоры... Поражение!");
                 User.setInsertName(null);
                 Forms.setLocation("/lose");
+                Forms.setBackground("/mycss/lose.jpg");
             }
 
 
@@ -91,9 +105,11 @@ public class Forms {
             if (selection.equals("selection1")) {
                 User.setInsertName(null);
                 Forms.setTitle("Тебя вернули домой. Победа!");
+                Forms.setBackground("/mycss/win.jpg");
             } else {
                 Forms.setTitle("Твою ложь разоблачили. Поражение");
                 User.setInsertName(null);
+                Forms.setBackground("/mycss/lose.jpg");
             }
             Forms.setLocation("/lose");
         }

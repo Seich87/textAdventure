@@ -11,20 +11,23 @@
     <head>
         <title>Моя игра</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/mycss/myView.css" />
 
     </head>
 
-    <body>
+    <body background="<%=Forms.getBackground()%>">
 
 
         <form method="post" action="http://localhost:8080/mySetServlet">
-            <div id="myTitle"><h1> <%= Forms.getTitle()%></h1></div>
+            <div id="myTitle" style="width: 750px"><h1> <%= Forms.getTitle()%></h1></div>
 
-            <input type="radio" name="selection" value="selection1" checked="checked"/><%= Forms.getText1()%>
-            <br/>
-            <input type="radio" name="selection" value="selection2"/><%= Forms.getText2()%><br />
+            <label class="select2" style="position: fixed; top: 320px; left: 30px">
+                <input type="radio" name="selection" value="selection1" checked="checked"/><%= Forms.getText1()%>
+                <br/>
+                <input type="radio" name="selection" value="selection2"/><%= Forms.getText2()%><br>
+            </label>
 
-            <button type="submit">Ответить</button>
+            <button type="submit" style="position: fixed; top: 382px; left: 35px">Ответить</button>
         </form>
 
         <br/>
@@ -32,7 +35,7 @@
         <br/>
         <br/>
 
-        <div>Статистика:<br/>
+        <div class="statistic2" style="position: fixed; top: 520px; left: 1100px">Статистика:<br/>
             IP address: <%= User.getSessionID()%><br/>
             Имя в игре: <%= User.getName()%><br/>
         </div>

@@ -1,0 +1,22 @@
+body {
+    background-size: cover;
+}
+
+
+h1 {
+    color: black;
+    font-family: Snell Roundhand, cursive;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: azure;
+
+}
+
+
+.statistic3 {
+    font-family: Snell Roundhand, cursive;
+    color: azure;
+    font-size: small;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
+    padding: 0 2px 0 0;
+}

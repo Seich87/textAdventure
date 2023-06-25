@@ -31,11 +31,11 @@ public class UserNameServlet extends HttpServlet {
         String name = req.getParameter("name");
         String sessionId = req.getRemoteAddr();
 
-        Forms.setTitle("Ты потерял память. Принять вызов НЛО?");
+        Forms.setTitle("Очнувшись, ты ничего не помнишь...<br>Ты потерял память...<br>Перед тобой огромный летающий каробль.<br>Тебя приглашают подняться.<br>Принять вызов?");
         Forms.setText1("Принять вызов");
         Forms.setText2("Отклонить вызов");
         Forms.setLocation("/mySetServlet");
-
+        Forms.setBackground("/mycss/NLO.jpg");
 
         User.setName(name);
         User.setSessionID(sessionId);

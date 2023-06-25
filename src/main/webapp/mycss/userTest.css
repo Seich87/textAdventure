@@ -1,0 +1,29 @@
+body {
+    background: url("/mycss/command.jpg") center;
+    background-size: cover;
+}
+
+h1 {
+    color: black;
+    font-family: Snell Roundhand, cursive;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: azure;
+
+}
+
+h4 {
+    color: azure;
+    font-family: URW Chancery L, cursive;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: -10px 0 0 rgba(0, 0, 0, 0.5), 10px 0 0 rgba(0, 0, 0, 0.5);
+    padding: 0 10px 0 0;
+}
+
+.insertName {
+    color: red;
+    font-family: Snell Roundhand, cursive;
+}
+
+
