@@ -42,6 +42,7 @@
         <div class="statistic" style="position: fixed; top: 520px; left: 1100px">Статистика:<br/>
              IP address: <%= User.getSessionID()%><br/>
              Имя в игре: <%= User.getName()%><br/>
+             Количество игр: <%= session.getAttribute("count")%>
         </div>
 
     </body>

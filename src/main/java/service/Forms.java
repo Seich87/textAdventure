@@ -1,8 +1,21 @@
 package service;
 
 
+import java.util.HashMap;
+
 public class Forms {
 
+    public static HashMap<String, Integer> getMap() {
+        return map;
+    }
+
+
+
+    public static void addMap(String name, int count) {
+        map.put(name, count);
+    }
+
+    private static HashMap<String, Integer> map = new HashMap<>();
     private static String title;
     private static String text1;
     private static String text2;
